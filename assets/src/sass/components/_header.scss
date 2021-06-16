@@ -1,63 +1,109 @@
-header {
+.site-header {
 	position: relative;
+	display: flex;
+	justify-content: center;
+	margin-top: 2rem;
 
-	.burnt-shake-site-icon {
-		max-width: 200px;
+	.burnt-shake-site-icon-small {
+		max-width: 120px;
 		display: block;
 		margin: 0 auto;
+		top: 9px;
+		position: relative;
+		left: 25px;
 	}
 
+	.main-navigation {
+		display: flex;
 
-#primary-menu {
-	list-style: none;
-	padding-left: 0;
+		.menu-primary-menu-container {
+			align-self: center;
 
-	li {
-		text-align: center;
-		font-size: 2.5rem;
-		font-family: 'Lato', sans-serif;
-		padding-bottom: 1.75rem;
+			.menu {
+				list-style: none;
+				padding-left: 0;
+				display: inline;
 
-		&:nth-child(1) {
-			a:hover {
-				color: rgb(252, 10, 10);
+				li {
+					text-align: center;
+					font-size: 2rem;
+					font-family: 'Lato', sans-serif;
+					padding-right: 0.75rem;
+					display: inline;
+
+					&:nth-child(1) {
+						a:hover {
+							color: rgb(252, 10, 10);
+						}
+					}
+
+					&.current-menu-item {
+						&:nth-child(1) {
+							a {
+								color: rgb(252, 10, 10);
+								text-decoration: underline;
+							}
+						}
+					}
+
+					&:nth-child(2) {
+						a:hover {
+							color: rgb(2, 208, 2);
+						}
+					}
+
+					&.current-menu-item {
+						&:nth-child(2) {
+							a {
+								color: rgb(2, 208, 2);
+								text-decoration: underline;
+							}
+						}
+					}
+
+					&:nth-child(3) {
+						a:hover {
+							color: #cd1ffe;
+						}
+					}
+
+					&.current-menu-item {
+						&:nth-child(3) {
+							a {
+								color: #cd1ffe;
+								text-decoration: underline;
+							}
+						}
+					}
+
+					&:nth-child(4) {
+						a:hover {
+							color: rgb(37, 37, 255);
+						}
+					}
+
+					&.current-menu-item {
+						&:nth-child(4) {
+							a {
+								color: rgb(37, 37, 255);
+								text-decoration: underline;
+							}
+						}
+					}
+
+					a {
+						color: black;
+						text-transform: uppercase;
+						font-style: italic;
+
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+				}
 			}
+
 		}
 
-		&:nth-child(2) {
-			a:hover {
-				color: rgb(2, 208, 2);
-			}
-		}
-
-		&:nth-child(3) {
-			a:hover {
-				color: rgb(254, 254, 31);
-			}
-		}
-
-		&:nth-child(4) {
-			a:hover {
-				color: rgb(223, 21, 223);
-			}
-		}
-
-		&:nth-child(5) {
-			a:hover {
-				color: rgb(37, 37, 255);
-			}
-		}
-
-		a {
-			color: black;
-			text-transform: uppercase;
-			font-style: italic;
-
-			&:hover {
-				text-decoration: underline;
-			}
-		}
 	}
-}
-
 }

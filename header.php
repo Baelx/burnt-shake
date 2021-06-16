@@ -32,51 +32,37 @@
 				echo '<div id="burnt-shake-header-control"></div>';
 			}
 			?>
+			<div class="site-branding">
+				<h1 class="site-title">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+						<?php if ( has_site_icon() ): ?>
+							<img class="burnt-shake-site-icon-small" src="<?php echo site_icon_url(); ?>" />
+						<?php endif; ?>
+					</a>
+				</h1>
+				<?php
+				$description = get_bloginfo( 'description', 'display' );
+				if ( $description || is_customize_preview() ) :
+				?>
+					<!-- <p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p> -->
+				<?php
+				endif;
+				?>
+		</div><!-- .site-branding -->
 
-			<div class="container container-fluid">
-
-				<div class="row">
-					<div class="col-xs-12 col-sm-4">
-
-						<div class="site-branding">
-							<h1 class="site-title">
-								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-									<?php svg( 'wordpress' ); ?>
-									<?php bloginfo( 'name' ); ?>
-								</a>
-							</h1>
-							<?php
-							$description = get_bloginfo( 'description', 'display' );
-							if ( $description || is_customize_preview() ) :
-							?>
-								<!-- <p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p> -->
-							<?php
-							endif;
-							?>
-					</div><!-- .site-branding -->
-
-				</div><!-- .col -->
-
-				<div class="col-xs-12 col-sm-8">
-
-					<nav id="site-navigation" class="main-navigation" role="navigation">
-						<?php
-						if ( has_nav_menu( 'primary' ) ) :
-							wp_nav_menu(
-								array(
-									'theme_location' => 'primary',
-									'menu_id'        => 'primary-menu',
-									'walker'         => new BurntShake\Core\WalkerNav(),
-								)
-							);
-						endif;
-						?>
-					</nav>
-
-				</div><!-- .col -->
-
-			</div><!-- .row -->
-		</div><!-- .container-fluid -->
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<?php
+			if ( has_nav_menu( 'primary' ) ) :
+				wp_nav_menu(
+					array(
+						'theme_location' => 'primary',
+						'menu_id'        => 'primary-menu',
+						'walker'         => new BurntShake\Core\WalkerNav(),
+					)
+				);
+			endif;
+			?>
+		</nav>
 
 	</header><!-- #masthead -->
 	<?php endif; ?>

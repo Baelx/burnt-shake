@@ -14,7 +14,7 @@
 		<?php if ( has_site_icon() ): ?>
 			<img class="burnt-shake-site-icon" src="<?php echo site_icon_url(); ?>" />
 		<?php endif; ?>
-		<h1 class="page-title"><?php bloginfo('title') ?></h1>
+		<h1 class="home-page-title"><?php bloginfo('title') ?></h1>
 	</header><!-- .page-header -->
 
 	<div class="page-content">
