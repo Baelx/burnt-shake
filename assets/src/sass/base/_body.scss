@@ -12,7 +12,24 @@ body {
 		justify-content: center;
 
 		#main {
-			max-width: 60%;
+			max-width: 90%;
+
+			@media screen and (min-width: 500px) {
+				& {
+					max-width: 50%;
+				}
+			}
+
+			article {
+				padding: 0 0.25rem;
+
+				@media screen and (min-width: 500px) {
+					& {
+						padding: 0 1.25rem;
+
+					}
+				}
+			}
 
 		}
 	}

@@ -2,22 +2,37 @@
 	position: relative;
 	display: flex;
 	justify-content: center;
-	margin-top: 2rem;
+	margin-top: 0;
+	margin-bottom: 1.5rem;
+
+	@media screen and (min-width: 500px) {
+		margin-top: 3rem;
+	}
 
 	.burnt-shake-site-icon-small {
-		max-width: 120px;
+		max-width: 80px;
 		display: block;
 		margin: 0 auto;
-		top: 9px;
-		position: relative;
-		left: 25px;
+
+		@media screen and (min-width: 500px) {
+			& {
+				max-width: 100px;
+			}
+		}
 	}
 
 	.main-navigation {
 		display: flex;
 
 		.menu-primary-menu-container {
-			align-self: center;
+			align-self: flex-end;
+			margin-bottom: 1.1rem;
+
+			@media screen and (min-width: 500px) {
+				& {
+					margin-bottom: 3rem;
+				}
+			}
 
 			.menu {
 				list-style: none;
@@ -26,21 +41,27 @@
 
 				li {
 					text-align: center;
-					font-size: 2rem;
 					font-family: 'Lato', sans-serif;
 					padding-right: 0.75rem;
 					display: inline;
+					font-size: 1.75rem;
+
+					@media screen and (min-width: 500px) {
+						& {
+							font-size: 2rem;
+						}
+					}
 
 					&:nth-child(1) {
 						a:hover {
-							color: rgb(252, 10, 10);
+							color: rgb(232, 139, 0);
 						}
 					}
 
 					&.current-menu-item {
 						&:nth-child(1) {
 							a {
-								color: rgb(252, 10, 10);
+								color: rgb(232, 139, 0);
 								text-decoration: underline;
 							}
 						}
@@ -63,14 +84,14 @@
 
 					&:nth-child(3) {
 						a:hover {
-							color: #cd1ffe;
+							color: rgb(37, 37, 255);
 						}
 					}
 
 					&.current-menu-item {
 						&:nth-child(3) {
 							a {
-								color: #cd1ffe;
+								color: rgb(37, 37, 255);
 								text-decoration: underline;
 							}
 						}
@@ -78,14 +99,14 @@
 
 					&:nth-child(4) {
 						a:hover {
-							color: rgb(37, 37, 255);
+							color: rgb(223, 21, 223);
 						}
 					}
 
 					&.current-menu-item {
 						&:nth-child(4) {
 							a {
-								color: rgb(37, 37, 255);
+								color: rgb(223, 21, 223);
 								text-decoration: underline;
 							}
 						}

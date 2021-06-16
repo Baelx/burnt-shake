@@ -10,7 +10,7 @@
 ?>
 
 <section class="no-results not-found">
-	<header class="page-header">
+	<header class="home-page-header">
 		<?php if ( has_site_icon() ): ?>
 			<img class="burnt-shake-site-icon" src="<?php echo site_icon_url(); ?>" />
 		<?php endif; ?>
