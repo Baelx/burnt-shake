@@ -1,7 +1,13 @@
 h1 {
 	text-align: center;
 	margin: 10px;
-	font-size: 3rem;
+	font-size: 3.5rem;
+
+	@media screen and (min-width: 500px) {
+		& {
+			font-size: 4rem;
+		}
+	}
 }
 
 .home-page-header {

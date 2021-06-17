@@ -32,7 +32,7 @@ class Setup
         /**
         * Add woocommerce support and woocommerce override
         */
-        // add_theme_support( 'woocommerce' );
+        add_theme_support( 'woocommerce' );
 
         add_theme_support( 'html5', array(
             'search-form',
