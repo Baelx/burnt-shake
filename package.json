@@ -21,7 +21,7 @@
     "@tinypixelco/laravel-mix-wp-blocks": "^1.1.0",
     "@wordpress/prettier-config": "^1.0.1",
     "autoprefixer": "^10.2.4",
-    "axios": "^0.21",
+    "axios": "^0.26",
     "babel-preset-react": "^6.24.1",
     "browser-sync": "^2.23.6",
     "browser-sync-webpack-plugin": "^2.0.1",
